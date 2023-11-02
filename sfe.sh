@@ -21,7 +21,7 @@ trap '' INT
 
 # Function to draw UI
 draw() {
-    printf "\e[0;$LINESr\e[2J\e[H\e[1m"
+    printf "\e[0;$LINESr\e[H\r\e[1m"
     export TITLE="SFE 0.1"
     export FILE="test"
     printf "\e[7m"
@@ -39,5 +39,5 @@ draw() {
 while true; do
     draw
     read -sn 1 char
-    SCREEN_TEXT+=$char
+    SCREEN_TEXT+="$char"
 done
