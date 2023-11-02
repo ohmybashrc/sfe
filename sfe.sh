@@ -3,6 +3,9 @@
 # Save for terminal emulators
 printf '\e[?1049h'
 
+# Clear
+printf '\e[2J'
+
 get_term_size() {
     # '\e7':           Save the current cursor position.
     # '\e[9999;9999H': Move the cursor to the bottom right corner.
