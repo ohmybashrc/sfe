@@ -38,6 +38,6 @@ draw() {
 # Constantly read and draw
 while true; do
     draw
-    read char -sn 1
+    read -sn 1 char
     SCREEN_TEXT+=$char
 done
